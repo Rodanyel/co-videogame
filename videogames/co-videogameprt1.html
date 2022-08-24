@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <title>Arrowkeys</title>
+        <script>
+
+
+            let objImage = null;
+            let ovjImage = null;
+            function init() {
+                objImage = document.getElementById("image1");
+                objImage.style.position = "relative";
+                objImage.style.left = "0px";
+                objImage.style.top = "0px";
+                objImage.style.borderRadius = "50%"
+                ovjImage = document.getElementById("image2");
+                ovjImage.style.position = "relative";
+                ovjImage.style.left = "0px";
+                ovjImage.style.top = "0px";
+                ovjImage.style.borderRadius = "50%"
+            }
+                     
+            function getKeyAndMove(e) {
+                let key_code = e.which || e.keyCode;
+                switch (key_code) {
+                    case 83: //left arrow key
+                    moveLeft();
+                    setTimeout(sQstep, 100);
+                        break;
+                    case 	87: //Up arrow key
+                        moveUp();
+                        setTimeout(sLstep, 100);
+                        break;
+                    case 68: //right arrow key
+                        moveRight();
+                        setTimeout(sYstep, 100)
+                        break;
+                    case 	65: //down arrow key
+                        moveDown();
+                        setTimeout(sqstep, 100);
+                        break;
+                   
+                    
+                    case 69://Attack move
+  
+                     moveAttack();
+                    setTimeout(sTstep, 500);
+                    setTimeout(sUstep, 1000);
+                    setTimeout(sIstep, 1500);
+                    setTimeout(sPstep, 2000);
+                   
+                         break;
+
+                    case 81://dance move
+                    dance();
+                setTimeout(sKstep, 500);
+                 setTimeout(sAstep, 1000);
+                 setTimeout(sMstep, 1500);
+                 setTimeout(smstep, 2000);
+               
+                
+                         break;
+
+
+
+                        
+
+
+
+
+ 
+                }
+                
+            
+           
+            }
+            function sTstep() {
+                objImage.src = "attackpart2.jpg";
+            }
+            function sUstep(){
+                objImage.src = "attackpart3.jpg";
+            }
+            function sIstep(){
+                objImage.src = "attackpart5.jpg";
+
+            }
+            function sPstep(){
+                objImage.src = "attackpart6.jpg"
+            }
+             
+            
+            function sYstep() {
+                objImage.src = "Download4part2.jpg";
+            }
+            
+            function sqstep() {
+                objImage.src = "Download2part2.jpg";
+            }
+        
+            function sLstep() {
+                objImage.src = "Download1part2.jpg";
+            }
+            
+            function sQstep() {
+                objImage.src = "Download3part2.jpg";
+            }
+            
+            function moveLeft() {
+              
+               objImage.src = "Download3.jpg"
+                objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+            }
+
+            
+
+
+           function moveAttack() {
+               objImage.src = "attack part 1.jpg"
+           }
+
+            function moveUp() {
+                objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
+                objImage.src = "Download1.jpg"
+                
+            }
+           
+            function moveRight() {
+                objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
+                objImage.src = "Download4.jpg"
+            }
+            
+            function moveDown() {
+                objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
+                objImage.src = "Download2.jpg"
+
+            }
+
+            function sKstep() {
+                objImage.src = "Dancemove.jpg";
+            }
+            function sAstep() {
+                objImage.src = "Dancemove2.jpg";
+            }
+            function sMstep() {
+                objImage.src = "Dancemove3.jpg";
+            }
+            function smstep() {
+                objImage.src = "Dancemove4.jpg";
+            }
+            function sNstep() {
+                objImage.src = "Dancemove5.jpg";
+            }
+            function snstep() {
+                objImage.src = "Dancemove6.jpg";
+            }
+            function slstep() {
+                objImage.src = "Dancemove7.jpg";
+            }
+            function spstep() {
+                objImage.src = "Dancemove8.jpg";
+            }
+          
+            
+            window.onload = init;
+        </script>
+    </head>
+    <body onkeydown="getKeyAndMove(event)">
+       
+        <style>
+            body{
+                background-color: black;
+            }
+        </style>
+        <img id="image2" src="idk2.jpg" width="45px" height="45px"/>
+        <img id="image1" src="idk.jpg" width="45px" height="45px"/>
+    </body>
+</html>
